@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น</title>
+    <link rel="icon" href="../image/icon/icon.jpg" type="icon/image"/>
+
+
+    <!-- stylesheet wrapper.css -->
+    <link rel="stylesheet" href="./../css/wrapper.css">
+    <!-- stylesheet personnel.css -->
+    <link rel="stylesheet" href="./../css/personnel.css">
+
+
+
+
+    <!-- jquery-3.5.0.js -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <!-- Start header -->
+    <header>
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">X</div>
+                <h3>ค้นหา</h3>
+                <form>
+                    <input class="search" name="s" type="search" placeholder="ป้อนค้นหา" autocomplete="off" autofocus>
+                    <a href=""><i class="fa fa-arrow-right"></i></a>
+                </form>
+            </div>
+        </div>
+        <nav>
+            <a href="../index.html">
+                <div class="logo">
+                    <div class="icon-logo"></div>
+                    <div class="text-logo">สาขาวิชาวิทยาการคอมพิวเตอร์<br>
+                        มหาวิทยาลัยขอนแก่น</div>
+                </div>
+            </a>
+
+            <label for="btn" class="icon">
+                <span id="btnBar" class="fa fa-bars"></span>
+            </label>
+            <input type="checkbox" id="btn">
+            <ul>
+                <li><a href="../index.html">หน้าหลัก</a></li>
+
+                <li>
+                    <label for="btn-1" class="show">เกี่ยวกับเรา <span class="fa fa-angle-down"></span></label>
+                    <a href="../index.html">เกี่ยวกับเรา <span class="fa fa-angle-down"></span></a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="./aboutus.html">ประวัติ</a></li>
+                        <li><a href="./personnel.html">บุคลากร</a></li>
+                        <li><a href="./questions.html">คำถามที่พบบ่อย</a></li>
+                        <li>
+                            <a href="./report.html">ร้องเรียน</a>
+                        </li>
+                        <li>
+                            <a href="./contactus.html">ติดต่อเรา</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="btn-2" class="show">การรับเข้าศึกษา <span class="fa fa-angle-down"></span></label>
+                    <a href="#">การรับเข้าศึกษา <span class="fa fa-angle-down"></span></a>
+                    <input type="checkbox" id="btn-2">
+                    <ul>
+                        <li>
+                            <a href="./admission-bachelors.html">ระดับปริญญาตรี</a>
+                        </li>
+                        <li>
+                            <a href="https://app.gs.kku.ac.th/gs/th">ระดับปริญญาโท</a>
+                        </li>
+                        <li>
+                            <a href="https://app.gs.kku.ac.th/gs/th">ระดับปริญญาเอก</a>
+                        </li>
+                        <li>
+                            <a href="./tuition.html">ค่าธรรมเนียม</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <label for="btn-3" class="show">หลักสูตร <span class="fa fa-angle-down"></span></label>
+                    <a href="#">หลักสูตร <span class="fa fa-angle-down"></span></a>
+                    <input type="checkbox" id="btn-3">
+                    <ul>
+                        <li>
+                            <label for="btn-4" class="show">ระดับปริญญาตรี <span
+                                    class="fa fa-angle-down"></span></label>
+                            <a href="#">ระดับปริญญาตรี <span class="fa fa-angle-right"></span></a>
+                            <input type="checkbox" id="btn-4">
+                            <ul>
+                                <li><a href="./BachelorProgram_CS.html">วิทยาการคอมพิวเตอร์</a></li>
+                                <li><a href="./BachelorProgram_IT.html">เทคโนโลยีสารสนเทศ</a></li>
+                                <li><a href="./BachelorProgram_GIS.html">ภูมิสารสนเทศศาสตร์</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <label for="btn-5" class="show">ระดับปริญญาโท <span class="fa fa-angle-down"></span></label>
+                            <a href="#">ระดับปริญญาโท <span class="fa fa-angle-right"></span></a>
+                            <input type="checkbox" id="btn-5">
+                            <ul>
+                                <li><a href="./MasterProgram_Ai.html">วิทยาการข้อมูลและปัญญาประดิษฐ์</a></li>
+                                <li><a href="./MasterProgram_CS.html">วิทยาการคอมพิวเตอร์</a></li>
+                                <li><a href="./MasterProgram_IT.html">เทคโนโลยีสารสนเทศ</a></li>
+                                <li>
+                                    <a href="./MasterProgram_GIS.html">การรับรู้ระยะไกลและระบบสารสนเทศภูมิศาสตร์</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <label for="btn-6" class="show">ระดับปริญญาเอก <span
+                                    class="fa fa-angle-down"></span></label>
+                            <a href="#">ระดับปริญญาเอก <span class="fa fa-angle-right"></span></a>
+                            <input type="checkbox" id="btn-6">
+                            <ul>
+                                <li><a href="./DoctorProgram_CS.html">วิทยาการคอมพิวเตอร์ (นานาชาติ)</a></li>
+                                <li><a href="./DoctorProgram_IT.html">เทคโนโลยีสารสนเทศ (นานาชาติ)</a></li>
+                                <li><a href="./DoctorProgram_GIS.html">การรับรู้ระยะไกลและระบบสารสนเทศภูมิศาสตร์</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <label for="btn-7" class="show">งานวิจัย <span class="fa fa-angle-down"></span></label>
+                    <a href="./research.html">งานวิจัย <span class="fa fa-angle-down"></span></a>
+                    <input type="checkbox" id="btn-7">
+                    <ul>
+                        <li>
+                            <a href="http://202.28.94.77/">ศูนย์วิจัย</a>
+                        </li>
+                        <li>
+                            <a href="./research-group.html">กลุ่มวิจัย</a>
+                        </li>
+                        <li>
+                            <a href="https://www.cs.kku.ac.th/index.php/th/mou-news-all">บันทึกข้อตกลง</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="./news.html">ข่าวสาร</a></li>
+                <li id="language"><a href="#" class="active-language">TH</a>
+                    /<a href="#">EN</a></li>
+                <li><a href="#"><i class="fa fa-search" onclick="togglePopup()"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- End header -->
+
+    <!-- Start content -->
+    <div class="content">
+
+        <!-- Start banner -->
+        <div class="banner">
+            <div class="banner-text">
+                <h2>บุคลากร</h2>
+            </div>
+        </div>
+        <!-- End banner -->
+
+        <!-- Start breakcrumbs -->
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">หน้าหลัก</a></li>
+            </ul>
+            <!-- icon fontawesome -->
+            <i class="fas fa-chevron-right"></i>
+            <ul>
+                <li><a href="./personnel.html"><span class="active">บุคลากร</span></a></li>
+            </ul>
+        </div>
+        <!-- End breakcrumbs -->
+
+        <div class="personnel">
+
+            <h2>ผู้บริหารสาขาวิชาวิทยาการคอมพิวเตอร์</h2>
+
+            <hr />
+
+            <div class="data">
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.สิรภัทร เชี่ยวชาญวัฒนา" src="./../image/personnel/personnel0.jpg"
+                            alt="ผศ.ดรสิรภัทร เชี่ยวชาญวัฒนา">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดรสิรภัทร เชี่ยวชาญวัฒนา</h3>
+                        <p>หัวหน้าสาขาวิชาวิทยาการคอมพิวเตอร์</p>
+
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ดร.วรัญญา วรรณศรี" src="./../image/personnel/personnel1.jpg"
+                            alt="อ.ดร.วรัญญา วรรณศรี">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ดร.วรัญญา วรรณศรี</h3>
+                        <p>รองหัวหน้าสาขาวิชาวิทยาการคอมพิวเตอร์<br />
+                            <strong>ฝ่ายแผนยุทธศาสตร์</strong>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.ชิตสุธา สุ่มเล็ก" src="./../image/personnel/personnel2.jpg"
+                            alt="ผศ.ดร.ชิตสุธา สุ่มเล็ก">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.ชิตสุธา สุ่มเล็ก</h3>
+                        <p>รองหัวหน้าสาขาวิชาวิทยาการคอมพิวเตอร์<br />
+                            <strong>ฝ่ายวิชาการ</strong>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ดร.วชิราวุธ ธรรมวิเศษ" src="./../image/personnel/personnel3.jpg"
+                            alt="อ.ดร.วชิราวุธ ธรรมวิเศษ">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ดร.วชิราวุธ ธรรมวิเศษ</h3>
+                        <p>รองหัวหน้าสาขาวิชาวิทยาการคอมพิวเตอร์<br />
+                            <strong>ฝ่ายสารสนเทศ</strong>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ดร.ณกร วัฒนกิจ" src="./../image/personnel/personnel4.jpg" alt="อ.ดร.ณกร วัฒนกิจ">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ดร.ณกร วัฒนกิจ</h3>
+                        <p>รองหัวหน้าสาขาวิชาวิทยาการคอมพิวเตอร์<br />
+                            <strong>ฝ่ายพัฒนานักศึกษาและศิษย์เก่าสัมพันธ์</strong>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ศรัณย์ อภิชนตระกูล" src="./../image/personnel/personnel5.jpg"
+                            alt="อ.ศรัณย์ อภิชนตระกูล">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ศรัณย์ อภิชนตระกูล</h3>
+                        <p>รองหัวหน้าสาขาวิชาวิทยาการคอมพิวเตอร์<br />
+                            <strong>ฝ่ายวิจัย</strong>
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดรสิรภัทร เชี่ยวชาญวัฒนา" src="./../image/personnel/personnel6.jpg"
+                            alt="ผศ.ดรสิรภัทร เชี่ยวชาญวัฒนา">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดรสิรภัทร เชี่ยวชาญวัฒนา</h3>
+                        <p>เลขานุการสาขาวิชาวิทยาการคอมพิวเตอร์<br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="personnel">
+
+            <h2>คณาจารย์ประจำหลักสูตร สาขาวิชาวิทยาการคอมพิวเตอร์</h2>
+
+            <hr />
+
+            <div class="data">
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="รศ.ดร.ศาสตรา วงศ์ธนวสุ" src="./../image/personnel/personnelCS0.jpg"
+                            alt="รศ.ดร.ศาสตรา วงศ์ธนวสุ">
+                    </div>
+                    <div class="text">
+                        <h3>รศ.ดร.ศาสตรา วงศ์ธนวสุ</h3>
+                        <p>Email : wongsar@kku.ac.th </p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.พุธษดี ศิริแสงตระกูล" src="./../image/personnel/personnelCS1.jpg" alt="ผศ.ดร.พุธษดี ศิริแสงตระกูล">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.พุธษดี ศิริแสงตระกูล</h3>
+                        <p>Email : pusadee@kku.ac.th</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.สิรภัทร เชี่ยวชาญวัฒนา " src="./../image/personnel/personnelCS2.jpg" alt="ผศ.ดร.สิรภัทร เชี่ยวชาญวัฒนา">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.สิรภัทร เชี่ยวชาญวัฒนา</h3>
+                        <p>Email: sunkra@kku.ac.th.</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.ปัญญาพล หอระตะ" src="./../image/personnel/personnelCS3.jpg" alt="ผศ.ดร.ปัญญาพล หอระตะ">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.ปัญญาพล หอระตะ</h3>
+                        <p>E-mail punhor1@kku.ac.th</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.สันติ ทินตะนัย " src="./../image/personnel/personnelCS4.jpg" alt="ผศ.สันติ ทินตะนัย ">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.สันติ ทินตะนัย </h3>
+                        <p>E-mail sunti@kku.ac.th </p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.คำรณ สุนัติ" src="./../image/personnel/personnelCS5.jpg" alt="ผศ.ดร.คำรณ สุนัติ">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.คำรณ สุนัติ</h3>
+                        <p>Email : skhamron@kku.ac.th</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.อุรฉัตร โคแก้ว" src="./../image/personnel/personnelCS6.jpg" alt="ผศ.ดร.อุรฉัตร โคแก้ว">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.อุรฉัตร โคแก้ว</h3>
+                        <p>E-mail urachart@kku.ac.th</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.สิลดา อินทรโสธรฉันท์ " src="./../image/personnel/personnelCS7.jpg" alt="ผศ.ดร.สิลดา อินทรโสธรฉันท์ ">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.สิลดา อินทรโสธรฉันท์ </h3>
+                        <p>Email: silain@kku.ac.th</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.บุญทรัพย์ ไวคำ" src="./../image/personnel/personnelCS8.jpg" alt="ผศ.บุญทรัพย์ ไวคำ">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.บุญทรัพย์ ไวคำ</h3>
+                        <p>E-mail boonsup@kku.ac.th</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.ชิตสุธา สุ่มเล็ก" src="./../image/personnel/personnelCS9.jpg" alt="ผศ.ดร.ชิตสุธา สุ่มเล็ก">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.ชิตสุธา สุ่มเล็ก</h3>
+                        <p>Email: chitsutha@kku.ac.th </p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ดร.วชิราวุธ ธรรมวิเศษ" src="./../image/personnel/personnelCS10.jpg" alt="อ.ดร.วชิราวุธ ธรรมวิเศษ">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ดร.วชิราวุธ ธรรมวิเศษ</h3>
+                        <p>E-mail twachi@kku.ac.th</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ดร.วรัญญา วรรณศรี" src="./../image/personnel/personnelCS11.jpg" alt="อ.ดร.วรัญญา วรรณศรี">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ดร.วรัญญา วรรณศรี</h3>
+                        <p>Email: waruwu@kku.ac.th</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ธนพล ตั้งชูพงศ์" src="./../image/personnel/personnelCS12.jpg" alt="อ.ธนพล ตั้งชูพงศ์">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ธนพล ตั้งชูพงศ์</h3>
+                        <p>Email: thanaphon@kku.ac.th</p>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+
+
+        <div class="personnel">
+
+            <h2>คณาจารย์ประจำหลักสูตร สาขาวิชาเทคโนโลยีสารสนเทศ</h2>
+
+            <hr />
+
+            <div class="data">
+
+                <div class="col">
+                    <div class="image">
+                        <img title="รศ.ดร.งามนิจ อาจอินทร์" src="./../image/personnel/personnelIT0.jpg"
+                            alt="รศ.ดร.งามนิจ อาจอินทร์">
+                    </div>
+                    <div class="text">
+                        <h3>รศ.ดร.งามนิจ อาจอินทร์</h3>
+                        <p>E-mail ngamnij@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="รศ.ดร.จักรชัย โสอินทร์" src="./../image/personnel/personnelIT1.jpg"
+                            alt="รศ.ดร.จักรชัย โสอินทร์">
+                    </div>
+                    <div class="text">
+                        <h3>รศ.ดร.จักรชัย โสอินทร์</h3>
+                        <p>Email: chakso@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="รศ.ดร.สมจิตร อาจอินทร์" src="./../image/personnel/personnelIT2.jpg"
+                            alt="รศ.ดร.สมจิตร อาจอินทร์">
+                    </div>
+                    <div class="text">
+                        <h3>รศ.ดร.สมจิตร อาจอินทร์</h3>
+                        <p>E-mail somjit@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.วรารัตน์ สงฆ์แป้น" src="./../image/personnel/personnelIT3.jpg"
+                            alt="ผศ.ดร.วรารัตน์ สงฆ์แป้น">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.วรารัตน์ สงฆ์แป้น</h3>
+                        <p>E-mail wararat@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.ปวีณา วันชัย" src="./../image/personnel/personnelIT4.jpg"
+                            alt="ผศ.ดร.ปวีณา วันชัย">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.ปวีณา วันชัย</h3>
+                        <p>E-mail wpaweena@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.มัลลิกา วัฒนะ" src="./../image/personnel/personnelIT5.jpg"
+                            alt="ผศ.ดร.มัลลิกา วัฒนะ">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.มัลลิกา วัฒนะ</h3>
+                        <p>Email monlwa@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ดร.รภัสสิทธิ์  ชินภัทรจีรัสถ์" src="./../image/personnel/personnelIT6.jpg"
+                            alt="อ.ดร.รภัสสิทธิ์  ชินภัทรจีรัสถ์">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ดร.รภัสสิทธิ์  ชินภัทรจีรัสถ์</h3>
+                        <p>E-mail rapassit@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.สายยัญ สายยศ" src="./../image/personnel/personnelIT7.jpg"
+                            alt="ผศ.ดร.สายยัญ สายยศ">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.สายยัญ สายยศ</h3>
+                        <p>E-mail saiyan@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร. สุมณฑา  เกษมวิลาศ" src="./../image/personnel/personnelIT8.jpg"
+                            alt="ผศ.ดร. สุมณฑา  เกษมวิลาศ">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร. สุมณฑา  เกษมวิลาศ</h3>
+                        <p>Email: sumkas@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ดร.อภิศักดิ์ พัฒนจักร" src="./../image/personnel/personnelIT9.jpg"
+                            alt="อ.ดร.อภิศักดิ์ พัฒนจักร">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ดร.อภิศักดิ์ พัฒนจักร</h3>
+                        <p>E-mail apisak@kku.ac.th</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="personnel">
+
+            <h2>คณาจารย์ประจำหลักสูตร สาขาวิชาภูมิสารสนเทศศาสตร์</h2>
+
+            <hr />
+
+            <div class="data">
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.พิพัธน์ เรืองแสง" src="./../image/personnel/personnelGIS0.jpg"
+                            alt="ผศ.ดร.พิพัธน์ เรืองแสง">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.พิพัธน์ เรืองแสง</h3>
+                        <p>E-mail reungsang@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.รัศมี สุวรรณวีระกำธร" src="./../image/personnel/personnelGIS1.jpg"
+                            alt="ผศ.ดร.รัศมี สุวรรณวีระกำธร">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.รัศมี สุวรรณวีระกำธร</h3>
+                        <p>E-mail rasamee@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.ชัยพล กีรติกสิกร" src="./../image/personnel/personnelGIS2.jpg"
+                            alt="ผศ.ดร.ชัยพล กีรติกสิกร">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.ชัยพล กีรติกสิกร</h3>
+                        <p>E-mail chaiyapon@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ดร.ณกร วัฒนกิจ" src="./../image/personnel/personnelGIS3.jpg"
+                            alt="อ.ดร.ณกร วัฒนกิจ">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ดร.ณกร วัฒนกิจ</h3>
+                        <p>E-mail nagon@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="ผศ.ดร.อุราวรรณ จันทร์เกษ" src="./../image/personnel/personnelGIS4.jpg"
+                            alt="ผศ.ดร.อุราวรรณ จันทร์เกษ">
+                    </div>
+                    <div class="text">
+                        <h3>ผศ.ดร.อุราวรรณ จันทร์เกษ</h3>
+                        <p>E-mail curawa@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ศรัณย์ อภิชนตระกูล" src="./../image/personnel/personnelGIS5.jpg"
+                            alt="อ.ศรัณย์ อภิชนตระกูล">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ศรัณย์ อภิชนตระกูล</h3>
+                        <p>Email: sarunap@kku.ac.th</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="อ.ดร.ศักดิ์พจน์ ทองเลี่ยมนาค" src="./../image/personnel/personnelGIS6.jpg"
+                            alt="อ.ดร.ศักดิ์พจน์ ทองเลี่ยมนาค">
+                    </div>
+                    <div class="text">
+                        <h3>อ.ดร.ศักดิ์พจน์ ทองเลี่ยมนาค</h3>
+                        <p>Email: sakpod@kku.ac.th</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="personnel">
+
+            <h2>เจ้าหน้าที่ประจำ สาขาวิชาวิทยาการคอมพิวเตอร์</h2>
+
+            <hr />
+
+            <div class="data">
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นางไพรวัลย์ คุณาสถิตย์ชัย" src="./../image/personnel/personnelOF0.jpg"
+                            alt="นางไพรวัลย์ คุณาสถิตย์ชัย">
+                    </div>
+                    <div class="text">
+                        <h3>นางไพรวัลย์ คุณาสถิตย์ชัย</h3>
+                        <p>E-mail kpriwa AT kku.ac.th<br />
+                            <strong>ตำแหน่ง เลขานุการ</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นายนันทสิทธิ์ บางใบ" src="./../image/personnel/personnelOF1.jpg"
+                            alt="นายนันทสิทธิ์ บางใบ">
+                    </div>
+                    <div class="text">
+                        <h3>นายนันทสิทธิ์ บางใบ</h3>
+                        <p>E-mail nantas AT kku.ac.th<br />
+                            <strong>ตำแหน่ง นักวิชาการคอมพิวเตอร์</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นางสาวชนกนันท์ ถูไกรวงษ์" src="./../image/personnel/personnelOF2.jpg"
+                            alt="นางสาวชนกนันท์ ถูไกรวงษ์">
+                    </div>
+                    <div class="text">
+                        <h3>นางสาวชนกนันท์ ถูไกรวงษ์</h3>
+                        <p>E-mail chantoo AT kku.ac.th <br />
+                            <strong>ตำแหน่ง พนักงานธุรการ</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นายพงษ์เทพ พระคุณ" src="./../image/personnel/personnelOF3.jpg"
+                            alt="นายพงษ์เทพ พระคุณ">
+                    </div>
+                    <div class="text">
+                        <h3>นายพงษ์เทพ พระคุณ</h3>
+                        <p>E-mail  pongpra AT kku.ac.th<br />
+                            <strong>ตำแหน่ง นักวิชาการการศึกษา</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นายสุธน เจริญศิริ" src="./../image/personnel/personnelOF4.jpg"
+                            alt="นายสุธน เจริญศิริ">
+                    </div>
+                    <div class="text">
+                        <h3>นายสุธน เจริญศิริ</h3>
+                        <p>E-mail sutoch AT kku.ac.th<br />
+                            <strong>ตำแหน่ง นักวิชาการคอมพิวเตอร์</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นางศิริรัตน์ ทินตะนัย" src="./../image/personnel/personnelOF5.jpg"
+                            alt="นางศิริรัตน์ ทินตะนัย">
+                    </div>
+                    <div class="text">
+                        <h3>นางศิริรัตน์ ทินตะนัย</h3>
+                        <p>E-mail sirirat AT kku.ac.th<br />
+                            <strong>ตำแหน่ง นักวิชาการคอมพิวเตอร์</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นางฉันทนา เรืองวงศ์วิทยา" src="./../image/personnel/personnelOF6.jpg"
+                            alt="นางฉันทนา เรืองวงศ์วิทยา">
+                    </div>
+                    <div class="text">
+                        <h3>นางฉันทนา เรืองวงศ์วิทยา</h3>
+                        <p>E-mail mchant AT kku.ac.th<br />
+                            <strong>ตำแหน่ง นักวิชาการการศึกษา</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นางสาวเนตรนรินทร์ ชนะบัว" src="./../image/personnel/personnelOF7.jpg"
+                            alt="นางสาวเนตรนรินทร์ ชนะบัว">
+                    </div>
+                    <div class="text">
+                        <h3>นางสาวเนตรนรินทร์ ชนะบัว</h3>
+                        <p>E-mail natech AT kku.ac.th<br />
+                            <strong>ตำแหน่ง เจ้าหน้าที่บริหารงานทั่วไป</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นางสาววิจิตรา ขจร" src="./../image/personnel/personnelOF8.jpg"
+                            alt="นางสาววิจิตรา ขจร">
+                    </div>
+                    <div class="text">
+                        <h3>นางสาววิจิตรา ขจร</h3>
+                        <p>E-mail wijika AT kku.ac.th<br />
+                            <strong>ตำแหน่ง เจ้าหน้าที่บริหารงานทั่วไป</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นายขวัญชัย มูลเค้า" src="./../image/personnel/personnelOF9.jpg"
+                            alt="นายขวัญชัย มูลเค้า">
+                    </div>
+                    <div class="text">
+                        <h3>นายขวัญชัย มูลเค้า</h3>
+                        <p>E-mail khwuanchai AT kku.ac.th<br />
+                            <strong>ตำแหน่ง พนักงานเครื่องคอมพิวเตอร์</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นายประจักษ์ สืบเมืองซ้าย" src="./../image/personnel/personnelOF10.jpg"
+                            alt="นายประจักษ์ สืบเมืองซ้าย">
+                    </div>
+                    <div class="text">
+                        <h3>นายประจักษ์ สืบเมืองซ้าย</h3>
+                        <p>E-mail pracsu AT kku.ac.th<br />
+                            <strong>ตำแหน่ง พนักงานเครื่องคอมพิวเตอร์</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="image">
+                        <img title="นางสาวณัฐธิชา  ชัยหงษ์" src="./../image/personnel/personnelOF11.jpg"
+                            alt="นางสาวณัฐธิชา  ชัยหงษ์">
+                    </div>
+                    <div class="text">
+                        <h3>นางสาวณัฐธิชา  ชัยหงษ์</h3>
+                        <p>E-mail Nuttcha AT kku.ac.th<br />
+                            <strong>ตำแหน่ง พนักงานบริการเอกสารทั่วไป</strong>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+
+        <!-- take content -->
+
+    </div>
+    <!-- End content -->
+
+    <!-- Start footer -->
+    <footer>
+        <div class="col">
+            <h2>ติดต่อเรา</h2>
+            <p>
+                อาคาร SC.06 คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น<br />
+                123 ถ.มิตรภาพ ต.ในเมือง อ.เมือง จ.ขอนแก่น 40002<br />
+                โทรศัพท์ 043-009700 ต่อ 44456, 44459, 44457<br />
+                โทรด่วน 089-7102651, 089-7102645
+            </p>
+        </div>
+        <div class="col">
+            <h2>Contact Us</h2>
+            <p>
+                SC.06 Department of Computer Science Khon kaen university<br>
+                123 Moo 16 Mittapap Road, Khon Kaen, Khon Kaen Province 40002<br>
+                Tel. 043-009700 ต่อ 44456, 44459, 44457<br>
+                Hot Line. 089-7102651, 089-7102645
+            </p>
+        </div>
+        <div class="col">
+            <h2>Social media</h2>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-line"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+
+            <p>ลิขสิทธิ์ © 2563 Department of Computer Science.</p>
+
+        </div>
+
+    </footer>
+    <!-- End footer -->
+
+    <!-- back to top -->
+    <a class="goTopBtn" href="#"><i class='fas fa-angle-up'></i></a>
+
+    <!-- javascript wrapper.js -->
+    <script src="./../js/wrapper.js"></script>
+
+</body>
+
+</html>

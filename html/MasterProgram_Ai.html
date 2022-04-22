@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น</title>
+    <link rel="icon" href="../image/icon/icon.jpg" type="icon/image"/>
+
+
+    <!-- stylesheet wrapper.css -->
+    <link rel="stylesheet" href="./../css/MasterProgram.css">
+
+
+
+    <!-- jquery-3.5.0.js -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
+    <!-- Start header -->
+    <header>
+        <div class="popup" id="popup-1">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="close-btn" onclick="togglePopup()">X</div>
+                <h3>ค้นหา</h3>
+                <form>
+                    <input class="search" name="s" type="search" placeholder="ป้อนค้นหา" autocomplete="off" autofocus>
+                    <a href=""><i class="fa fa-arrow-right"></i></a>
+                </form>
+            </div>
+        </div>
+        <nav>
+            <a href="../index.html">
+                <div class="logo">
+                    <div class="icon-logo"></div>
+                    <div class="text-logo">สาขาวิชาวิทยาการคอมพิวเตอร์<br>
+                        มหาวิทยาลัยขอนแก่น</div>
+                </div>
+            </a>
+
+            <label for="btn" class="icon">
+                <span id="btnBar" class="fa fa-bars"></span>
+            </label>
+            <input type="checkbox" id="btn">
+            <ul>
+                <li><a href="../index.html">หน้าหลัก</a></li>
+
+                <li>
+                    <label for="btn-1" class="show">เกี่ยวกับเรา <span class="fa fa-angle-down"></span></label>
+                    <a href="../index.html">เกี่ยวกับเรา <span class="fa fa-angle-down"></span></a>
+                    <input type="checkbox" id="btn-1">
+                    <ul>
+                        <li><a href="./aboutus.html">ประวัติ</a></li>
+                        <li><a href="./personnel.html">บุคลากร</a></li>
+                        <li><a href="./questions.html">คำถามที่พบบ่อย</a></li>
+                        <li>
+                            <a href="./report.html">ร้องเรียน</a>
+                        </li>
+                        <li>
+                            <a href="./contactus.html">ติดต่อเรา</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <label for="btn-2" class="show">การรับเข้าศึกษา <span class="fa fa-angle-down"></span></label>
+                    <a href="#">การรับเข้าศึกษา <span class="fa fa-angle-down"></span></a>
+                    <input type="checkbox" id="btn-2">
+                    <ul>
+                        <li>
+                            <a href="./admission-bachelors.html">ระดับปริญญาตรี</a>
+                        </li>
+                        <li>
+                            <a href="https://app.gs.kku.ac.th/gs/th">ระดับปริญญาโท</a>
+                        </li>
+                        <li>
+                            <a href="https://app.gs.kku.ac.th/gs/th">ระดับปริญญาเอก</a>
+                        </li>
+                        <li>
+                            <a href="./tuition.html">ค่าธรรมเนียม</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <label for="btn-3" class="show">หลักสูตร <span class="fa fa-angle-down"></span></label>
+                    <a href="#">หลักสูตร <span class="fa fa-angle-down"></span></a>
+                    <input type="checkbox" id="btn-3">
+                    <ul>
+                        <li>
+                            <label for="btn-4" class="show">ระดับปริญญาตรี <span
+                                    class="fa fa-angle-down"></span></label>
+                            <a href="#">ระดับปริญญาตรี <span class="fa fa-angle-right"></span></a>
+                            <input type="checkbox" id="btn-4">
+                            <ul>
+                                <li><a href="./BachelorProgram_CS.html">วิทยาการคอมพิวเตอร์</a></li>
+                                <li><a href="./BachelorProgram_IT.html">เทคโนโลยีสารสนเทศ</a></li>
+                                <li><a href="./BachelorProgram_GIS.html">ภูมิสารสนเทศศาสตร์</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <label for="btn-5" class="show">ระดับปริญญาโท <span class="fa fa-angle-down"></span></label>
+                            <a href="#">ระดับปริญญาโท <span class="fa fa-angle-right"></span></a>
+                            <input type="checkbox" id="btn-5">
+                            <ul>
+                                <li><a href="./MasterProgram_Ai.html">วิทยาการข้อมูลและปัญญาประดิษฐ์</a></li>
+                                <li><a href="./MasterProgram_CS.html">วิทยาการคอมพิวเตอร์</a></li>
+                                <li><a href="./MasterProgram_IT.html">เทคโนโลยีสารสนเทศ</a></li>
+                                <li>
+                                    <a href="./MasterProgram_GIS.html">การรับรู้ระยะไกลและระบบสารสนเทศภูมิศาสตร์</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <label for="btn-6" class="show">ระดับปริญญาเอก <span
+                                    class="fa fa-angle-down"></span></label>
+                            <a href="#">ระดับปริญญาเอก <span class="fa fa-angle-right"></span></a>
+                            <input type="checkbox" id="btn-6">
+                            <ul>
+                                <li><a href="./DoctorProgram_CS.html">วิทยาการคอมพิวเตอร์ (นานาชาติ)</a></li>
+                                <li><a href="./DoctorProgram_IT.html">เทคโนโลยีสารสนเทศ (นานาชาติ)</a></li>
+                                <li><a href="./DoctorProgram_GIS.html">การรับรู้ระยะไกลและระบบสารสนเทศภูมิศาสตร์</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <label for="btn-7" class="show">งานวิจัย <span class="fa fa-angle-down"></span></label>
+                    <a href="./research.html">งานวิจัย <span class="fa fa-angle-down"></span></a>
+                    <input type="checkbox" id="btn-7">
+                    <ul>
+                        <li>
+                            <a href="http://202.28.94.77/">ศูนย์วิจัย</a>
+                        </li>
+                        <li>
+                            <a href="./research-group.html">กลุ่มวิจัย</a>
+                        </li>
+                        <li>
+                            <a href="https://www.cs.kku.ac.th/index.php/th/mou-news-all">บันทึกข้อตกลง</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="./news.html">ข่าวสาร</a></li>
+                <li id="language"><a href="#" class="active-language">TH</a>
+                    /<a href="#">EN</a></li>
+                <li><a href="#"><i class="fa fa-search" onclick="togglePopup()"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- End header -->
+
+    <!-- Start content -->
+    <div class="content1">
+
+        <!-- Start banner -->
+
+        <div class="banner">
+            <div class="banner-text">
+                <h2>สาขาวิชาวิทยาการข้อมูลและปัญญาประดิษฐ์</h2>
+            </div>
+        </div>
+        <!-- End banner -->
+
+        <!-- Start breakcrumbs -->
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="../index.html">หน้าหลัก</a></li>
+            </ul>
+            <!-- icon fontawesome -->
+            <i class="fas fa-chevron-right"></i>
+            <ul>
+                <li><a href="./course.html">หลักสูตร</a></li>
+            </ul>
+            <i class="fas fa-chevron-right"></i>
+            <ul>
+                <li><a href="./course2.html">ระดับปริญญาโท</a></li>
+            </ul>
+            <i class="fas fa-chevron-right"></i>
+            <ul>
+                <li><a href="./MasterProgram_Ai.html"><span class="active">สาขาวิชาวิทยาการข้อมูลและปัญญาประดิษฐ์</span></a></li>
+            </ul>
+        </div>
+
+        <!-- End breakcrumbs -->
+        <!-- Take content -->
+
+        <div class="wrapper">
+            <!-- Accordion Heading One -->
+            <div class="parent-tab tab-1">
+                <input type="radio" name="tab" id="tab-1">
+                <label for="tab-1" class="tab-1">
+                  <span>รายละเอียด</span>
+                  <span class="content-icon"><i class="fas fa-plus"></i></span>
+                </label>
+                <div class="content">
+                    <p class="heading-one"> ชื่อหลักสูตร : หลักสูตรวิทยาศาสตรมหาบัณฑิต สาขาวิชาวิทยาการข้อมูลและปัญญาประดิษฐ์ หลักสูตรนานาชาติ<br>
+                        ชื่อปริญญา : วิทยาศาสตรมหาบัณฑิต (วิทยาการข้อมูลและปัญญาประดิษฐ์)  วท.ม. (วิทยาการข้อมูลและปัญญาประดิษฐ์) </p>
+                    <!-- Sub Heading One -->
+                    <div class="child-tab">
+                        <input type="checkbox" name="sub-tab" id="tab-2">
+                        <label for="tab-2">
+                        <span>คุณสมบัติของผู้เรียน</span>
+                        <span class="content-icon"><i class="fas fa-plus"></i></span>
+                        </label>
+                        <div class="sub-content">
+                            <p class=".heading-one">1) เป็นไปตามประกาศกระทรวงศึกษาธิการ เรื่อง เกณฑ์มาตรฐานหลักสูตรระดับบัณฑิตศึกษา พ.ศ. 2558<br>
+
+                            2) เป็นไปตามระเบียบมหาวิทยาลัยขอนแก่น ว่าด้วย การศึกษาระดับบัณฑิตศึกษา พ.ศ. 2559<br>
+
+                            3) ผู้มีสิทธิ์เข้าศึกษาใน แผน ก แบบ ก 1 จะต้องสำเร็จการศึกษาปริญญาตรีหรือเทียบเท่าสาขาวิชาวิทยาการข้อมูล สาขาวิชาวิทยาการคอมพิวเตอร์ สาขาวิชาวิศวกรรมคอมพิวเตอร์ สาขาวิชาคณิตศาสตร์ หรือสาขาวิชาสถิติ โดยมีผลการศึกษาปริญญาตรีในระดับเกียรตินิยมอันดับสองขึ้นไป<br>
+
+                            4) ผู้มีสิทธิ์เข้าศึกษาใน แผน ก แบบ ก 2 และ แผน ข จะต้องสำเร็จการศึกษาขั้นปริญญาตรีหรือเทียบเท่าทุกสาขา แต่ทั้งนี้คณะกรรมการบริหารหลักสูตรสามารถให้ผู้มีสิทธิ์เข้าศึกษาลงทะเบียนเรียนวิชาพื้นฐานอื่น ๆ เพิ่มเติมจากหลักสูตรที่กำหนดไว้ด้วยก็ได้ โดยไม่คิดหน่วยกิต<br>
+
+                            5) ถ้าผู้สมัครมีคุณสมบัติไม่ตรงตามข้อ 2) หรือ 3) จะต้องมีประสบการณ์ในการทำงานด้านคอมพิวเตอร์ ที่เกี่ยวข้องกับวิทยาการข้อมูล ปัญญาประดิษฐ์ หรือการพัฒนาระบบอัจฉริยะ (Intelligence Systems) 2 ปีขึ้นไป หรือได้รับความเห็นชอบจากคณะกรรมการบริหารหลักสูตร
+                            </p>
+                        </div>
+                    </div>
+                    <!-- End Sub Heading One -->
+
+                    <!-- Sub Heading Two -->
+                    <div class="child-tab">
+                        <input type="checkbox" name="sub-tab" id="tab-3">
+                        <label for="tab-3">
+                        <span>เกณฑ์การสำเร็จการศึกษาตามหลักสูตร</span>
+                        <span class="content-icon"><i class="fas fa-plus"></i></span>
+                        </label>
+                        <div class="sub-content">
+                            <p><strong>แผน ก แบบ ก 1</strong> เสนอวิทยานิพนธ์และสอบผ่านการสอบปากเปล่า ขั้นสุดท้าย โดยคณะกรรมการที่สถาบันอุดมศึกษานั้นแต่งตั้ง และต้องเป็นระบบเปิดให้ผู้สนใจเข้ารับฟังได้ สำหรับผลงานวิทยานิพนธ์หรือส่วนหนึ่งของวิทยานิพนธ์ต้องได้รับการตีพิมพ์ หรืออย่างน้อยได้รับ การยอมรับให้ตีพิมพ์ในวารสารระดับชาติหรือระดับนานาชาติที่มีคุณภาพตามประกาศคณะกรรมการ การอุดมศึกษา เรื่อง หลักเกณฑ์การพิจารณาวารสารทางวิชาการสาหรับการเผยแพร่ผลงานทางวิชาการ</p>
+                            <p><strong>แผน ก แบบ ก 2 </strong>ศึกษารายวิชาครบถ้วนตามที่กำหนดในหลักสูตร โดยจะต้องได้ระดับคะแนนเฉลี่ยไม่ต่ำกว่า 3.00 จากระบบ 4 ระดับคะแนนหรือเทียบเท่า พร้อมทั้ง เสนอวิทยานิพนธ์และสอบผ่านการสอบปากเปล่าขั้นสุดท้ายโดยคณะกรรมการที่สถาบันอุดมศึกษานั้นแต่งตั้ง และต้องเป็นระบบเปิดให้ผู้สนใจเข้ารับฟังได้ ผลงานวิทยานิพนธ์หรือส่วนหนึ่งของวิทยานิพนธ์ต้องได้รับการตีพิมพ์ หรืออย่างน้อยได้รับการยอมรับให้ตีพิมพ์ในวารสารระดับชาติหรือระดับนานาชาติที่มีคุณภาพตามประกาศ คณะกรรมการการอุดมศึกษา เรื่อง หลักเกณฑ์การพิจารณาวารสารทางวิชาการสาหรับการเผยแพร่ ผลงานทางวิชาการ หรือนำเสนอต่อที่ประชุมวิชาการโดยบทความที่นาเสนอฉบับสมบูรณ์ (Full Paper) ได้รับการตีพิมพ์ในรายงานสืบเนื่องจากการประชุมวิชาการ (Proceedings) ดังกล่าว</p>
+                            <p><strong>แผน ข</strong> ศึกษารายวิชาครบถ้วนตามที่กำหนดในหลักสูตร โดยจะต้อง ได้ระดับคะแนนเฉลี่ยไม่ต่ำกว่า 3.00 จากระบบ 4 ระดับคะแนนหรือเทียบเท่า และสอบผ่านการสอบ ประมวลความรู้ (Comprehensive Examination) ด้วยข้อเขียนและ/หรือปากเปล่าในสาขาวิชานั้น พร้อมทั้งเสนอรายงานการค้นคว้าอิสระและสอบผ่านการสอบปากเปล่าขั้นสุดท้าย โดยคณะกรรมการที่สถาบันอุดมศึกษานั้นแต่งตั้ง โดยเป็นระบบเปิดให้ผู้สนใจเข้ารับฟังได้ และรายงานการค้นคว้าอิสระ หรือส่วนหนึ่งของรายงานการค้นคว้าอิสระต้องได้รับการเผยแพร่ในลักษณะใดลักษณะหนึ่งที่สืบค้นได้</p>
+                        </div>
+                    </div>
+                    <!-- End Sub Heading Two -->
+                    <!-- Sub Heading Three -->
+                <div class="child-tab">
+                    <input type="checkbox" name="sub-tab" id="tab-4">
+                    <label for="tab-4">
+                    <span>ระยะเวลาในการศึกษา และระบบการจัดการศึกษา</span>
+                    <span class="content-icon"><i class="fas fa-plus"></i></span>
+                    </label>
+                    <div class="sub-content">
+                        <p>ระยะเวลา 2 ปีการศึกษา<br>
+                            ระบบเป็นระบบทวิภาค โดย 1 ปีการศึกษาแบ่งออกเป็น 2 ภาคการศึกษาปกติ 1 ภาคการศึกษาปกติ มีระยะเวลาศึกษาไม่น้อยกว่า 15 สัปดาห์</p>
+                    </div>
+                </div>
+                <!-- End Sub Heading Three -->
+
+                </div>
+            </div>
+
+            <!-- Accordion Heading Two -->
+            <div class="parent-tab tab-5">
+                <input type="radio" name="tab" id="tab-5">
+                <label for="tab-5" class="tab-5">
+                  <span>โครงสร้างหลักสูตร</span>
+                  <span class="content-icon"><i class="fas fa-plus"></i></span>
+                </label>
+                <div class="content">
+                    
+                    <table>
+                        <tr>
+                            <th rowspan="2">หมวดวิชาตามโครงสร้างหลักสูตร</th>
+                            <th colspan="3">จำนวนหน่วยกิต</th>
+                        </tr>
+                        <tr>
+                            <th>แผน ก แบบ ก 1</th>
+                            <th>แผน ก แบบ ก 2</th>
+                            <th>แผน ข</th>
+                        </tr>
+                        <tr>
+                            <td>หมวดวิชาบังคับ</td>
+                            <td>-</td>
+                            <td>14</td>
+                            <td>14</td>
+                        </tr>
+                        <tr>
+                            <td>หมวดวิชาเลือก</td>
+                            <td>-</td>
+                            <td>12</td>
+                            <td>18</td>
+                        </tr>
+                        <tr>
+                            <td>วิชาวิทยานิพนธ์</td>
+                            <td>38</td>
+                            <td>12</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>วิชาการศึกษาอิสระ</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>6</td>
+                        </tr>
+                        <tr>
+                            <th>รวม</th>
+                            <th>38</th>
+                            <th>38</th>
+                            <th>38</th>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+
+            <!-- Accordion Heading Three -->
+             <div class="parent-tab tab-6">
+                <input type="radio" name="tab" id="tab-6">
+                <label for="tab-6" class="tab-6">
+                  <span>แผนการศึกษา</span>
+                  <span class="content-icon"><i class="fas fa-plus"></i></span>
+                </label>
+                <div class="content">
+                    <!-- Sub Heading One -->
+                    <div class="child-tab">
+                        <input type="checkbox" name="sub-tab" id="tab-7">
+                        <label for="tab-7">
+                        <span>ปีการศึกษาที่ 1</span>
+                        <span class="content-icon"><i class="fas fa-plus"></i></span>
+                        </label>
+                        <div class="sub-content">
+                            <table>
+                                <tr>
+                                    <th colspan=5 >ปีที่ 1 ภาคการศึกษาที่ 1</th>
+                                </tr>
+                                <tr>
+                                    <th>รหัสวิชา</th>
+                                    <th>วิชา</th>
+                                    <th>แผน ก 1 หน่วยกิต</th>
+                                    <th>แผน ก 2 หน่วยกิต</th>
+                                    <th>แผน ข หน่วยกิต</th>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 701</td>
+                                    <td>แบบจำลองข้อมูลและการจัดการข้อมูล</td>
+                                    <td>-</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 702</td>
+                                    <td>การเรียนรู้ของเครื่อง</td>
+                                    <td>-</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 703</td>
+                                    <td>การเขียนโปรแกรมคอมพิวเตอร์สำหรับวิทยาการข้อมูลและปัญญาประดิษฐ์</td>
+                                    <td>-</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 898</td>
+                                    <td>วิทยานิพนธ์</td>
+                                    <td>10</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 XXX</td>
+                                    <td>วิชาเลือก</td>
+                                    <td>-</td>
+                                    <td>6</td>
+                                    <td>6</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th colspan=2 >รวมจำนวนหน่วยกิตลงทะเบียนเรียน</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>11</th>
+                                </tr>
+                                <tr>
+                                    <th colspan=2 >รวมจำนวนหน่วยกิตสะสม</th>
+                                    <th>10</th>
+                                    <th>11</th>
+                                    <th>11</th>
+                                </tr>
+
+                            </table>
+                            <table>
+                                <tr>
+                                    <th colspan=5 >ปีที่ 1 ภาคการศึกษาที่ 2</th>
+                                </tr>
+                                <tr>
+                                    <th>รหัสวิชา</th>
+                                    <th>วิชา</th>
+                                    <th>แผน ก 1 หน่วยกิต</th>
+                                    <th>แผน ก 2 หน่วยกิต</th>
+                                    <th>แผน ข หน่วยกิต</th>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 704</td>
+                                    <td>ปัญญาประดิษฐ์</td>
+                                    <td>-</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 705</td>
+                                    <td>ธุรกิจอัจฉริยะและการวิเคราะห์</td>
+                                    <td>-</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 898</td>
+                                    <td>วิทยานิพนธ์</td>
+                                    <td>10</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 XXX</td>
+                                    <td>วิชาเลือก</td>
+                                    <td>-</td>
+                                    <td>6</td>
+                                    <td>6</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th colspan=2 >รวมจำนวนหน่วยกิตลงทะเบียนเรียน</th>
+                                    <th>10</th>
+                                    <th>12</th>
+                                    <th>12</th>
+                                </tr>
+                                <tr>
+                                    <th colspan=2 >รวมจำนวนหน่วยกิตสะสม</th>
+                                    <th>20</th>
+                                    <th>23</th>
+                                    <th>23</th>
+                                </tr>
+
+                            </table>
+                            
+                        </div>
+                    </div>
+                    <!-- End Sub Heading One -->
+
+                    <!-- Sub Heading Two -->
+                    <div class="child-tab">
+                        <input type="checkbox" name="sub-tab" id="tab-8">
+                        <label for="tab-8">
+                        <span>ปีการศึกษาที่ 2</span>
+                        <span class="content-icon"><i class="fas fa-plus"></i></span>
+                        </label>
+                        <div class="sub-content">
+                            <table>
+                                <tr>
+                                    <th colspan=5 >ปีที่ 2 ภาคการศึกษาที่ 1</th>
+                                </tr>
+                                <tr>
+                                    <th>รหัสวิชา</th>
+                                    <th>วิชา</th>
+                                    <th>แผน ก 1 หน่วยกิต</th>
+                                    <th>แผน ก 2 หน่วยกิต</th>
+                                    <th>แผน ข หน่วยกิต</th>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 797</td>
+                                    <td>การศึกษาอิสระ</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 898</td>
+                                    <td>วิทยานิพนธ์</td>
+                                    <td>10</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 899</td>
+                                    <td>วิทยานิพนธ์</td>
+                                    <td>-</td>
+                                    <td>6</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 XXX</td>
+                                    <td>วิชาเลือก</td>
+                                    <td>-</td>
+                                    <td>3</td>
+                                    <td>6</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th colspan=2 >รวมจำนวนหน่วยกิตลงทะเบียนเรียน</th>
+                                    <th>10</th>
+                                    <th>9</th>
+                                    <th>9</th>
+                                </tr>
+                                <tr>
+                                    <th colspan=2 >รวมจำนวนหน่วยกิตสะสม</th>
+                                    <th>30</th>
+                                    <th>32</th>
+                                    <th>32</th>
+                                </tr>
+
+                            </table>
+
+                            <table>
+                                <tr>
+                                    <th colspan=5 >ปีที่ 2 ภาคการศึกษาที่ 2</th>
+                                </tr>
+                                <tr>
+                                    <th>รหัสวิชา</th>
+                                    <th>วิชา</th>
+                                    <th>แผน ก 1 หน่วยกิต</th>
+                                    <th>แผน ก 2 หน่วยกิต</th>
+                                    <th>แผน ข หน่วยกิต</th>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 797</td>
+                                    <td>การศึกษาอิสระ</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 798</td>
+                                    <td>วิทยานิพนธ์</td>
+                                    <td>8</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 799</td>
+                                    <td>วิทยานิพนธ์</td>
+                                    <td>-</td>
+                                    <td>6</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 XXX</td>
+                                    <td>วิชาเลือก</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>3</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th colspan=2 >รวมจำนวนหน่วยกิตลงทะเบียนเรียน</th>
+                                    <th>8</th>
+                                    <th>6</th>
+                                    <th>6</th>
+                                </tr>
+                                <tr>
+                                    <th colspan=2 >รวมจำนวนหน่วยกิตสะสม</th>
+                                    <th>38</th>
+                                    <th>38</th>
+                                    <th>38</th>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                    <!-- End Sub Heading Two -->
+
+                </div>
+            </div>
+
+            <!-- Accordion Heading Four -->
+            <div class="parent-tab tab-9">
+                <input type="radio" name="tab" id="tab-9">
+                <label for="tab-9" class="tab-13">
+                  <span>รายวิชาที่เปิดสอน</span>
+                  <span class="content-icon"><i class="fas fa-plus"></i></span>
+                </label>
+                <div class="content">
+                    <!-- Sub Heading One -->
+                    <div class="child-tab">
+                        <input type="checkbox" name="sub-tab" id="tab-10">
+                        <label for="tab-10">
+                        <span>หมวดวิชาบังคับ</span>
+                        <span class="content-icon"><i class="fas fa-plus"></i></span>
+                        </label>
+                        <div class="sub-content">
+                            <table>
+                                <tr>
+                                    <th>รหัสวิชา</th>
+                                    <th>วิชา</th>
+                                    <th>หน่วยกิต</th>
+                                </tr>
+
+                                <tr>
+                                    <td>SC 348 701</td>
+                                    <td>แบบจำลองข้อมูลและการจัดการข้อมูล</td>
+                                    <td>3(2-2-5)</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 702</td>
+                                    <td>การเรียนรู้ของเครื่อง</td>
+                                    <td>3(2-2-5)</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 703</td>
+                                    <td>การเขียนโปรแกรมคอมพิวเตอร์สำหรับวิทยาการข้อมูลและปัญญาประดิษฐ์</td>
+                                    <td>2(0-4-5)</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 704</td>
+                                    <td>ปัญญาประดิษฐ์</td>
+                                    <td>3(2-2-5)</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 705</td>
+                                    <td>ธุรกิจอัจฉริยะและการวิเคราะห์</td>
+                                    <td>3(3-0-6)</td>
+                                </tr>
+                                
+                            </table>
+
+                        
+                        </div>
+                    </div>
+                    <!-- End Sub Heading One -->
+
+                    <!-- Sub Heading Two -->
+                    <div class="child-tab">
+                        <input type="checkbox" name="sub-tab" id="tab-11">
+                        <label for="tab-11">
+                        <span>หมวดวิชาเลือก</span>
+                        <span class="content-icon"><i class="fas fa-plus"></i></span>
+                        </label>
+                        <div class="sub-content">
+                            <p>สำหรับแผน ก แบบ ก 2 ต้องเลือกลงทะเบียนเรียนจากรายวิชาต่อไปนี้ ไม่น้อย
+                                กว่า 12 หน่วยกิต และหลักสูตร แผน ข ต้องเลือกลงทะเบียนเรียนจากรายวิชาต่อไปนี้ ไม่น้อยกว่า 18 หน่วยกิต โดย
+                                
+                                นักศึกษาสามารถเลือกเรียนในรายวิชาต่าง ๆ ในแต่ละกลุ่มสาขาวิชาได้ทุกกลุ่ม หรือรายวิชาอื่นในระดับบัณฑิตศึกษาของสาขาวิชา โดยความเห็นชอบของคณะกรรมการบริหารหลักสูตร</p>
+                            <table>
+                                <tr>
+                                    <th colspan="3">วิชาวิทยานิพนธ์</th>
+                                </tr>
+                                <tr>
+                                    <th>รหัสวิชา</th>
+                                    <th>วิชา</th>
+                                    <th>หน่วยกิต</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">สำหรับแผน ก แบบ ก 1</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 898</td>
+                                    <td>วิทยานิพนธ์</td>
+                                    <td>38</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">สำหรับแผน ก แบบ ก 2</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>SC 348 899</td>
+                                    <td>วิทยานิพนธ์</td>
+                                    <td>12</td>
+                                </tr>
+                            </table>
+                            <table>
+                                <tr>
+                                    <th colspan="3">วิชาการศึกษาอิสระ</th>
+                                </tr>
+                                <tr>
+                                    <th>รหัสวิชา</th>
+                                    <th>วิชา</th>
+                                    <th>หน่วยกิต</th>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">สำหรับแผน ข</td>
+                                </tr>
+                                <tr>
+                                    <td>SC 348 897</td>
+                                    <td>การศึกษาอิสระ</td>
+                                    <td>6</td>
+                                </tr>
+                            </table>
+
+                                
+
+                            
+                        </div>
+                    </div>
+                    <!-- End Sub Heading Two -->
+                                        
+
+                </div>
+            </div>
+
+
+        <!-- End wrapper -->
+        </div>
+    </div>
+
+        <!-- End content -->
+
+    <!-- Start footer -->
+    <footer>
+        <div class="col">
+            <h2>ติดต่อเรา</h2>
+            <p>
+                อาคาร SC.06 คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น<br />
+                123 ถ.มิตรภาพ ต.ในเมือง อ.เมือง จ.ขอนแก่น 40002<br />
+                โทรศัพท์ 043-009700 ต่อ 44456, 44459, 44457<br />
+                โทรด่วน 089-7102651, 089-7102645
+            </p>
+        </div>
+        <div class="col">
+            <h2>Contact Us</h2>
+            <p>
+                SC.06 Department of Computer Science Khon kaen university<br>
+                123 Moo 16 Mittapap Road, Khon Kaen, Khon Kaen Province 40002<br>
+                Tel. 043-009700 To 44456, 44459, 44457<br>
+                Hot Line. 089-7102651, 089-7102645
+            </p>
+        </div>
+        <div class="col">
+            <h2>Social media</h2>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-line"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+
+            <p>ลิขสิทธิ์ © 2563 Department of Computer Science.</p>
+
+        </div>
+
+    </footer>
+    <!-- End footer -->
+
+    <!-- back to top -->
+    <a class="goTopBtn" href="#"><i class='fas fa-angle-up'></i></a>
+
+    <!-- javascript wrapper.js -->
+    <script src="./../js/wrapper.js"></script>
+
+</body>
+
+</html>

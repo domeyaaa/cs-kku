@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="th">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น</title>
+    <link rel="icon" href="./image/icon/icon.jpg" type="icon/image"/>
+
+    <script src="./js/wrapper.js"></script>
+</head>
+
+<body>
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglePopup()">X</div>
+            <h3>ค้นหา</h3>
+            <form>
+                <input class="search" name="s" type="search" placeholder="ป้อนคำค้นหา" autocomplete="off" autofocus>
+                <a href=""><i class="fa fa-arrow-right"></i></a>
+            </form>
+        </div>
+    </div>
+    <nav>
+        <a href="./index.html">
+        <div class="logo">
+            <div class="icon-logo"></div>
+            <div class="text-logo">สาขาวิชาวิทยาการคอมพิวเตอร์<br>
+                มหาวิทยาลัยขอนแก่น</div>
+
+        </div>
+        </a>
+        <label for="btn" class="icon">
+            <span id="btnBar" class="fa fa-bars"></span>
+        </label>
+        <input type="checkbox" id="btn">
+        <ul>
+            <li><a class="active" href="./index.html">หน้าหลัก</a></li>
+
+            <li>
+                <label for="btn-1" class="show">เกี่ยวกับเรา <span class="fa fa-angle-down"></span></label>
+                <a href="#">เกี่ยวกับเรา <span class="fa fa-angle-down"></span></a>
+                <input type="checkbox" id="btn-1">
+                <ul>
+                    <li><a href="./html/aboutus.html">ประวัติ</a></li>
+                    <li><a href="./html/personnel.html">บุคลากร</a></li>
+                    <li><a href="./html/questions.html">คำถามที่พบบ่อย</a></li>
+                    <li>
+                        <a href="./html/report.html">ร้องเรียน</a>
+                    </li>
+                    <li>
+                        <a href="./html/contactus.html">ติดต่อเรา</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <label for="btn-2" class="show">การรับเข้าศึกษา <span class="fa fa-angle-down"></span></label>
+                <a href="#">การรับเข้าศึกษา <span class="fa fa-angle-down"></span></a>
+                <input type="checkbox" id="btn-2">
+                <ul>
+                    <li>
+                        <a href="./html/admission-bachelors.html">ระดับปริญญาตรี</a>
+                    </li>
+                    <li>
+                        <a href="https://app.gs.kku.ac.th/gs/th" target="_blank">ระดับปริญญาโท</a>
+                    </li>
+                    <li>
+                        <a href="https://app.gs.kku.ac.th/gs/th" target="_blank">ระดับปริญญาเอก</a>
+                    </li>
+                    <li>
+                        <a href="./html/tuition.html">ค่าธรรมเนียม</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li>
+                <label for="btn-3" class="show">หลักสูตร <span class="fa fa-angle-down"></span></label>
+                <a href="#">หลักสูตร <span class="fa fa-angle-down"></span></a>
+                <input type="checkbox" id="btn-3">
+                <ul>
+                    <li>
+                        <label for="btn-4" class="show">ระดับปริญญาตรี <span class="fa fa-angle-down"></span></label>
+                        <a href="#">ระดับปริญญาตรี <span class="fa fa-angle-right"></span></a>
+                        <input type="checkbox" id="btn-4">
+                        <ul>
+                            <li><a href="./html/BachelorProgram_CS.html">วิทยาการคอมพิวเตอร์</a></li>
+                            <li><a href="./html/BachelorProgram_IT.html">เทคโนโลยีสารสนเทศ</a></li>
+                            <li><a href="./html/BachelorProgram_GIS.html">ภูมิสารสนเทศศาสตร์</a></li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <label for="btn-5" class="show">ระดับปริญญาโท <span class="fa fa-angle-down"></span></label>
+                        <a href="#">ระดับปริญญาโท <span class="fa fa-angle-right"></span></a>
+                        <input type="checkbox" id="btn-5">
+                        <ul>
+                            <li><a href="./html/MasterProgram_Ai.html">วิทยาการข้อมูลและปัญญาประดิษฐ์</a></li>
+                            <li><a href="./html/DoctorProgram_CS.html">วิทยาการคอมพิวเตอร์</a></li>
+                            <li><a href="./html/MasterProgram_IT.html">เทคโนโลยีสารสนเทศ</a></li>
+                            <li>
+                                <a href="./html/MasterProgram_GIS.html">การรับรู้ระยะไกลและระบบสารสนเทศภูมิศาสตร์</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <label for="btn-6" class="show">ระดับปริญญาเอก <span class="fa fa-angle-down"></span></label>
+                        <a href="#">ระดับปริญญาเอก <span class="fa fa-angle-right"></span></a>
+                        <input type="checkbox" id="btn-6">
+                        <ul>
+                            <li><a href="./html/DoctorProgram_CS.html">วิทยาการคอมพิวเตอร์ (นานาชาติ)</a></li>
+                            <li><a href="./html/DoctorProgram_IT.html">เทคโนโลยีสารสนเทศ (นานาชาติ)</a></li>
+                            <li><a href="./html/DoctorProgram_GIS.html">การรับรู้ระยะไกลและระบบสารสนเทศภูมิศาสตร์</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li>
+                <label for="btn-7" class="show">งานวิจัย <span class="fa fa-angle-down"></span></label>
+                <a href="./html/research.html">งานวิจัย <span class="fa fa-angle-down"></span></a>
+                <input type="checkbox" id="btn-7">
+                <ul>
+                    <li>
+                        <a href="http://202.28.94.77/" target="_blank">ศูนย์วิจัย</a>
+                    </li>
+                    <li>
+                        <a href="./html/research-group.html">กลุ่มวิจัย</a>
+                    </li>
+                    <li>
+                        <a href="https://www.cs.kku.ac.th/index.php/th/mou-news-all">บันทึกข้อตกลง</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li><a href="./html/news.html">ข่าวสาร</a></li>
+            <li id="language"><a href="#" class="active-language">TH</a>
+                /<a href="#">EN</a></li>
+            <li><a href="#"><i class="fa fa-search" onclick="togglePopup()"></i></a></li>
+        </ul>
+    </nav>
+    <div class="content">
+
+        <div class="banner">
+            <div class="banner-text">
+                <h2>สาขาวิชาวิทยาการคอมพิวเตอร์</h2>
+                <h3>คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น</h3>
+            </div>
+        </div>
+        <div class="user-option">
+            <div class="user">
+                <form action="./html/prospective.html">
+                    <button class="interestedPerson"><i class="fas fa-users"></i><br />ผู้สนใจศึกษาต่อ</button>
+                </form>
+            </div>
+            <div class="user">
+                <form action="./html/std.html">
+                    <button class="student"><i class="fas fa-id-card"></i><br />นักศึกษา</button>
+                </form>
+            </div>
+            <div class="user">
+                <form action="./html/alumni.html">
+                    <button class="alumni"><i class="fas fa-user-graduate"></i><br />ศิษย์เก่า</button>
+                </form>
+            </div>
+            <div class="user">
+                <form action="./html/teacher.html">
+                    <button class="staff"><i class="fas fa-user-circle"></i><br />อาจารย์ / เจ้าหน้าที่</button>
+                </form>
+            </div>
+        </div>
+        <div class="content-welcome">
+            <div class="all-content-welcome">
+                <div class="img-welcome">
+                    <iframe src="https://www.youtube.com/embed/VYG4Y0NMSIA"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="discription-welcome">
+                    <p>สาขาวิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยขอนแก่น มุ่งพัฒนาไปสู่หน่วยงานการศึกษาที่มีความเป็นเลิศ
+                        ที่จะผลิตบัณฑิตทั้งระดับปริญญาตรีและระดับบัณฑิตศึกษาทางด้านวิทยาการคอมพิวเตอร์ และ
+                        เทคโนโลยีสารสนเทศ
+                        เพื่อเป็นแหล่งความรู้และบริการวิชาการ แก่สังคมในภูมิภาคภาคตะวันออกเฉียงเหนือ
+                        ประเทศชาติและอนุภูมิภาคลุ่มน้ำโขง อันจะนำไปสู่มาตรฐานระดับสากล
+                        มุ่งผลิตบัณฑิตทางด้านวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศที่เพียบพร้อมด้วยความรู้ สติปัญญา
+                        จริยธรรม การสอนวิชาพื้นฐานทางด้านวิทยาการคอมพิวเตอร์และเทคโนโลยีสารสนเทศแก่นักศึกษาคณะต่าง ๆ
+                        ของมหาวิทยาลัยขอนแก่น การวิจัยเพื่อสร้างองค์ความรู้ให้เกิดการพัฒนาที่สมดุลและยั่งยืน
+                        การบริการวิชาการแก่สังคมในภาคตะวันออกเฉียงเหนือ การเชื่อมโยงเครือข่ายความร่วมมือ
+                        และส่งเสริมทางวิชาการกับประเทศต่าง ๆ ในอนุภูมิภาคลุ่มน้ำโขงและภูมิภาคอื่น
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="content-news">
+            <div class="set-font">
+                <h2>ข่าวเด่น</h2>
+                <span class="read-all read-all2">|</span>
+                <span class="read-all"><a href="./html/hotnews.html">อ่านข่าวทั้งหมด</a></span>
+            </div>
+            <div class="all-news">
+                <div class="news">
+                    <a href="./html/onenews.html">
+                        <div class="news-img">
+                            <img title="ยินดีต้อนรับทุกท่านเข้าร่วมทำการแข่งขันคอมพิวเตอร์โอลิมปิกระดับชาติ ครั้งที่ 16"
+                                src="./image/news/hotnews4.jpg"
+                                alt="ยินดีต้อนรับทุกท่านเข้าร่วมทำการแข่งขันคอมพิวเตอร์โอลิมปิกระดับชาติ ครั้งที่ 16" />
+                            <br /></div>
+                        ยินดีต้อนรับทุกท่านเข้าร่วมทำการแข่งขันคอมพิวเตอร์โอลิมปิกระดับชาติ ครั้งที่ 16
+                    </a>
+                    <br />
+                    <span>04 พฤศจิกายน 2563</span>
+                </div>
+                <div class="news">
+                    <a href="#">
+                        <div class="news-img">
+                            <img title="ประธานรัฐสภามอบรางวัลผู้ชนะเลิศการแข่งขันออกแบบ Platform การเข้าชื่อเสนอกฎหมายทางอิเล็กทรอนิกส์"
+                            src="./image/news/hotnews3.jpg"
+                                alt="ประธานรัฐสภามอบรางวัลผู้ชนะเลิศการแข่งขันออกแบบ Platform การเข้าชื่อเสนอกฎหมายทางอิเล็กทรอนิกส์" />
+                            <br />
+                        </div>
+                        ประธานรัฐสภามอบรางวัลผู้ชนะเลิศการแข่งขันออกแบบ Platform การเข้าชื่อเสนอกฎหมายทางอิเล็กทรอนิกส์
+                    </a>
+                    <br />
+                    <span>24 กันยายน 2563 </span>
+
+
+                </div>
+                <div class="news">
+                    <a href="#">
+                        <div class="news-img">
+                            <img title="ถ่ายรายการ “เ(ก)รียนไหนดี” ณ วิทยาการคอมพิวเตอร์ มข."
+                            src="./image/news/hotnews1.jpg"
+                                alt="ถ่ายรายการ “เ(ก)รียนไหนดี” ณ วิทยาการคอมพิวเตอร์ มข." />
+                            <br /></div>
+                        ถ่ายรายการ “เ(ก)รียนไหนดี” ณ วิทยาการคอมพิวเตอร์ มข.
+                    </a>
+                    <br />
+                    <span>29 กันยายน 2563</span>
+                </div>
+
+                <div class="news">
+                    <a href="./html/onenews.html">
+                        <div class="news-img">
+                            <img title="นศ.คว้ารางวัลที่ 3 บนเวทีการแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์ระดับประเทศ ครั้งที่ 22 (NSC2020)"
+                            src="./image/news/hotnews2.jpg"
+                                alt=" นศ.คว้ารางวัลที่ 3 บนเวทีการแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์ระดับประเทศ ครั้งที่ 22 (NSC2020)" />
+                            <br />
+                        </div>
+                        นศ.คว้ารางวัลที่ 3 บนเวทีการแข่งขันพัฒนาโปรแกรมคอมพิวเตอร์ระดับประเทศ ครั้งที่ 22 (NSC2020)
+                    </a>
+                    <br />
+                    <span>07 สิงหาคม 2563</span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <footer>
+
+        <div class="col">
+            <h2>ติดต่อเรา</h2>
+            <p>
+                อาคาร SC.06 คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่น<br />
+                123 ถ.มิตรภาพ ต.ในเมือง อ.เมือง จ.ขอนแก่น 40002<br />
+                โทรศัพท์ 043-009700 ต่อ 44456, 44459, 44457<br />
+                โทรด่วน 089-7102651, 089-7102645
+            </p>
+        </div>
+        <div class="col">
+            <h2>Contact Us</h2>
+            <p>
+                SC.06 Department of Computer Science Khon kaen university<br>
+                123 Moo 16 Mittapap Road, Khon Kaen, Khon Kaen Province 40002<br>
+                Tel. 043-009700 ext. 44456, 44459, 44457<br>
+                Hot Line. 089-7102651, 089-7102645
+            </p>
+        </div>
+        <div class="col">
+            <h2>Social media</h2>
+            <a href="#"><i class="fab fa-facebook-square"></i></a>
+            <a href="#"><i class="fab fa-line"></i></a>
+            <a href="#"><i class="fab fa-instagram-square"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+
+            <p>ลิขสิทธิ์ © 2563 Department of Computer Science.</p>
+        </div>
+    </footer>
+
+
+    <!-- back to top -->
+    <a class="goTopBtn" href="#"><i class='fas fa-angle-up'></i></a>
+     <!-- javascript wrapper.js -->
+     <script src="./js/wrapper.js"></script>
+
+</body>
+
+</html>

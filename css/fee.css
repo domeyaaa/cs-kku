@@ -1,0 +1,17 @@
+table .center{
+    text-align: center;
+}
+
+th,td{
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #cfcfcf ;
+}
+
+tr:nth-child(odd){
+    background-color: #efefef;
+}
+
+table{
+    border: none;
+}

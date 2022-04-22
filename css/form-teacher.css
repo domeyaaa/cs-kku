@@ -1,0 +1,8 @@
+.in-ct a{
+    color: #000;
+    text-decoration: none;
+}
+
+.in-ct a:hover{
+    color: #2c66d1;
+}
